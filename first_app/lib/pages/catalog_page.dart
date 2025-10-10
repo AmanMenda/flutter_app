@@ -10,7 +10,19 @@ class CatalogPage extends StatefulWidget {
 }
 
 class _CatalogPageState extends State<CatalogPage> {
-  List<Product> get products => demoProducts;
+  final _searchController = TextEditingController();
+  String searchTerm = '';
+
+  List<Product> get products {
+    final query = searchTerm.trim().toLowerCase();
+    return demoProducts.where((p) {
+      final okSearch =
+          //query.isEmpty ||
+          p.name.toLowerCase().contains(query) ||
+          p.description.toLowerCase().contains(query);
+      return okSearch;
+    }).toList();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +34,26 @@ class _CatalogPageState extends State<CatalogPage> {
         child: Column(
           children: [
             // recherche
+            Padding(
+              padding: const EdgeInsets.all(12),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: TextField(
+                      controller: _searchController,
+                      decoration: const InputDecoration(
+                        prefix: Icon(Icons.search),
+                        hintText: 'Rechercher un produit',
+                        border: OutlineInputBorder(),
+                        isDense: true,
+                      ),
+                      onChanged: (value) => setState(() => searchTerm = value),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            //liste des produits
             Expanded(
               child: products.isEmpty
                   ? const Center(child: Text('Aucun produit'))
@@ -55,6 +87,7 @@ class _CatalogPageState extends State<CatalogPage> {
 
   @override
   void dispose() {
+    _searchController.dispose();
     super.dispose();
   }
 }
