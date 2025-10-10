@@ -15,7 +15,7 @@ class _CatalogPageState extends State<CatalogPage> {
   @override
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
-    
+
     return Scaffold(
       appBar: AppBar(title: const Text('Catalogue')),
       body: SafeArea(
@@ -40,7 +40,10 @@ class _CatalogPageState extends State<CatalogPage> {
                       itemCount: products.length,
                       itemBuilder: (_, i) {
                         final product = products[i];
-                        return ProductCard(product: product, colorScheme: scheme)
+                        return ProductCard(
+                          product: product,
+                          colorScheme: scheme,
+                        );
                       },
                     ),
             ),
