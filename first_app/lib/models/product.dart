@@ -7,7 +7,7 @@ class Product {
   final double price;
   final String imageUrl;
   final String category;
-  final DateTime createdAt; // = DateTime.now();
+  final DateTime createdAt;
 
   Product({
     required this.name,
@@ -16,10 +16,9 @@ class Product {
     required this.imageUrl,
     required this.category,
     DateTime? createdAt,
-  }) : this.createdAt = createdAt ?? DateTime.now();
+  }) : createdAt = createdAt ?? DateTime.now();
 }
 
-//données de démo
 final demoProducts = <Product>[
   Product(
     name: 'Pixel 10',
