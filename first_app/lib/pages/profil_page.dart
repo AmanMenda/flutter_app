@@ -33,12 +33,12 @@ class ProfilPage extends StatelessWidget {
                     ),
                     const SizedBox(height: 16),
                     Text(
-                      'Vincent',
+                      'Aman',
                       style: Theme.of(context).textTheme.headlineMedium,
                     ),
                     const SizedBox(height: 4),
                     Text(
-                      'Développeur Flutter',
+                      'Ingénieur IoT',
                       style: TextStyle(color: scheme.primary),
                     ),
                     const SizedBox(height: 16),
@@ -54,9 +54,9 @@ class ProfilPage extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.all(16),
                         child: const Text(
-                          "Passionné par le mobile et le design. "
-                          "J’aime construire des expériences rapides, accessibles "
-                          "et élégantes avec Flutter.",
+                          "Passionné par les systèmes embarqués. "
+                          "J'aime construire des expériences performantes, accessibles "
+                          "et élégantes.",
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -80,7 +80,7 @@ class ProfilPage extends StatelessWidget {
                           Divider(height: 1),
                           _ContactTile(
                             icon: Icons.phone,
-                            label: '+33 6 12 34 56 78',
+                            label: '+33 7 71 77 34 32',
                           ),
                           Divider(height: 1),
                           _ContactTile(
@@ -99,7 +99,7 @@ class ProfilPage extends StatelessWidget {
                       child: FilledButton.icon(
                         onPressed: () {
                           ScaffoldMessenger.of(context).showSnackBar(
-                            const SnackBar(content: Text('Contacter-moi')),
+                            const SnackBar(content: Text('Contactez-moi')),
                           );
                         },
                         icon: const Icon(Icons.send),
@@ -112,7 +112,7 @@ class ProfilPage extends StatelessWidget {
                     Opacity(
                       opacity: 0.7,
                       child: Text(
-                        'Flutter',
+                        '<Footer>',
                         style: Theme.of(context).textTheme.bodySmall,
                       ),
                     ),

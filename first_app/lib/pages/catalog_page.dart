@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:first_app/models/product.dart';
 import 'package:first_app/widgets/cart_icon.dart';
 import 'package:first_app/widgets/product_card.dart';
@@ -41,7 +39,19 @@ class _CatalogPageState extends State<CatalogPage> {
     final scheme = Theme.of(context).colorScheme;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Catalogue'), actions: [CartIcon()]),
+      appBar: AppBar(
+        title: const Text('Catalogue'),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/about');
+            },
+            icon: const Icon(Icons.person),
+            tooltip: 'Profil',
+          ),
+          const CartIcon(),
+        ],
+      ),
       body: SafeArea(
         child: Column(
           children: [
