@@ -24,7 +24,7 @@ final demoProducts = <Product>[
     name: 'Pixel 10',
     description: 'Google Pixel 10',
     price: 890,
-    imageUrl: '',
+    imageUrl: 'https://images.rebuy.com/iTcsnpn9fzoYebB2JVWgZ6DB39Y=/fit-in/1280x800/noupscale/rebuy-production-akeneo/3/c/c/9/3cc990b63b6ec232f4aa24659a64ed0a1333bbd5_frontcover_electronics_15686233.jpg?t=1762936562',
     category: 'Smartphone',
   ),
   Product(
@@ -39,7 +39,7 @@ final demoProducts = <Product>[
     name: 'Z flip 7',
     description: 'Samsung Galaxy Z flip 7',
     price: 590,
-    imageUrl: '',
+    imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkmnvusmB6jRtO5JhszC-DFz80Q517Sg609w&s',
     category: 'Smartphone',
   ),
 ];
